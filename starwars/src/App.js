@@ -23,7 +23,7 @@ const App = (props) => {
 
   return (
      <div className="App">
-      <h2 className="Header">React Wars</h2>
+      
       
       
     {data.map((item,index) =>(<StarWarsCard key={index}

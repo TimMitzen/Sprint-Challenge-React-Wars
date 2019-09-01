@@ -1,6 +1,10 @@
 import React from "react";
 import "../App.css"
 import styled from "styled-components"
+import swbig from "../../src/sw-bg.jpg"
+import { Card, CardImg, CardText, CardBody,
+   CardTitle, CardSubtitle, Button , CardLink} from 'reactstrap';
+ 
  
 const H1 = styled.h1`
 font-size: 3rem;
@@ -20,11 +24,13 @@ color: navy;`;
 const StarWarCards=(props) => {
    return(
       <div>
-        <H1>Name: {props.name}</H1>
-        <H2>  Birth year: {props.birthday}</H2>
-        <A>HomeWorld: {props.homeworld}</A>
-
-     
+         <Card>
+         <CardBody inverse style={{backgroundImage: `url(${swbig})`}}>
+         <CardTitle inverse style={{color: "grey", fontSize:"2.5rem"}}>Name: {props.name}</CardTitle>
+         <CardText> Birth year: {props.birthday}</CardText>
+         <CardLink href={props.homeworld}> HomeWorld </CardLink>
+         </CardBody>
+         </Card>
       </div>
    );
 };
